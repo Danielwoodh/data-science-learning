@@ -3,6 +3,11 @@ The aim of this repo is to collate resources and notes on various data science, 
 
 ----
 ## Data Science
+### Statistics
+
+### Machine Learning
+
+### Deep Learning
 
 ----
 ## Data Engineering
