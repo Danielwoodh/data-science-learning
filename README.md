@@ -3,6 +3,11 @@ The aim of this repo is to collate resources and notes on various data science, 
 
 **NOTE**: Not all of these resources need to be completed fully, a deeper assessment of which resources are most suitable for my specific goals will be undertaken prior to committing to a course.
 
+## Software Engineering
+### Software Design Patterns
+- [Holub on Patterns](https://holub.com/goodies/holub_design_patterns.pdf)  Progress: ![](https://geps.dev/progress/50)
+- [Refactoring Guru](https://refactoring.guru/design-patterns/python)  Progress: ![](https://geps.dev/progress/25)
+
 ----
 ## Data Science
 ### Statistics
