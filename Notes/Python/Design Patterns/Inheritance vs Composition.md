@@ -13,13 +13,13 @@ tags:
 <summary>🔍 SUMMARY</summary>
 
 ### Summary
-This note elucidates the concepts of inheritance and composition in Python, pivotal in software design patterns. **Inheritance** is about deriving a new class from an existing one, fostering code reuse and hierarchy. **Composition** involves building complex objects from simpler entities, promoting flexibility and decoupling. The discernment between them is crucial in Python for effective object-oriented design.
+This note explains the concepts of inheritance and composition in Python, pivotal in software design patterns. **Inheritance** is about deriving a new class from an existing one, fostering code reuse and hierarchy. **Composition** involves building complex objects from simpler entities, promoting flexibility and decoupling. The discernment between them is crucial in Python for effective object-oriented design.
 
 </details>
 
 ---
 
-<details> <summary> ##🧩 Inheritance in Python</summary>
+<details> <summary> 🧩 Inheritance in Python</summary>
 ## 🧩 Inheritance in Python
 - **Definition**: A paradigm where a new class (`child`) inherits attributes and methods from an existing class (`parent`).
 - **Use Cases**:
