@@ -6,7 +6,7 @@ tags:
   - SoftwareDesignPatterns
 ---
 # Common and Best Python Software Design Patterns
-<details> <summary>🔍 Summary</summary>
+<details> <summary font-weight=bold>🔍 Summary</summary>
 This note covers common and best software design patterns in Python, essential for efficient, maintainable, and scalable code. Design patterns provide standardized solutions to frequent software design challenges. Understanding these patterns empowers Python developers to improve code quality and address architectural problems effectively.  </details> 
 
 ---
