@@ -19,7 +19,6 @@ This note explains the concepts of inheritance and composition in Python, pivota
 
 ---
 
-<details> <summary> 🧩 Inheritance in Python</summary>
 ## 🧩 Inheritance in Python
 - **Definition**: A paradigm where a new class (`child`) inherits attributes and methods from an existing class (`parent`).
 - **Use Cases**:
@@ -31,8 +30,7 @@ This note explains the concepts of inheritance and composition in Python, pivota
 - **Disadvantages**:
   - **Complexity**: Can lead to tightly coupled and complex code structures.
   - **Base Class Sensitivity**: Changes in the parent class can significantly impact child classes.
-</details>
-
+  - 
 ---
 
 ## 🧱 Composition in Python
