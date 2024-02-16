@@ -5,8 +5,8 @@ tags:
   - Python
   - SoftwareDesignPatterns
 ---
-``# Common and Best Python Software Design Patterns
-<details> <summary>🔍 **Click to expand the summary**</summary>
+# Common and Best Python Software Design Patterns
+<details> <summary>🔍 Summary</summary>
 ### Summary
 This note covers common and best software design patterns in Python, essential for efficient, maintainable, and scalable code. Design patterns provide standardized solutions to frequent software design challenges. Understanding these patterns empowers Python developers to improve code quality and address architectural problems effectively.  </details> 
 
@@ -17,7 +17,8 @@ Ensures a class has only one instance and provides a global point of access to i
 ### Use Cases
 Logging, database connections, file managers.
 
-<summary font-weight: bold> 📄 Code Example </summary>
+<summary> 📄 Code Example </summary>
+
 ```python
 class Singleton:
 	_instance = None
@@ -31,6 +32,7 @@ class Singleton:
 # Usage
 singleton = Singleton.getInstance()
 ```
+
 ---
 
 ## 🧱 Factory Method Pattern
@@ -66,7 +68,7 @@ product = creator.factory_method()
 
 ---
 
-## 🔄 Observer Pattern
+## 🔍 Observer Pattern
 
 ### Purpose
 
@@ -77,7 +79,6 @@ Lets one object (the "subject") notify a list of objects (the "observers") about
 Event handling systems, model-view-controller (MVC) architectures.
 
 <summary>📄 Code Example</summary>
-
 
 ```python
 class Subject:
@@ -114,16 +115,35 @@ Composes objects into tree structures to represent part-whole hierarchies.
 
 User interface components, file and directory systems.
 
-<details> <summary>📄 **Click for Code Example**</summary>
+<summary>📄 Code Example</summary>
 
-python
-
-`class Component:     def operation(self):         pass  class Leaf(Component):     def operation(self):         return "Leaf"  class Composite(Component):     def __init__(self):         self._children = []      def operation(self):         results = []         for child in self._children:             results.append(child.operation())         return "+".join(results)  # Usage leaf = Leaf() composite = Composite() composite._children.append(leaf) print(composite.operation())`
-
-</details>
+```python
+class Component:     
+	def operation(self):         
+		pass  
+		
+class Leaf(Component):     
+	def operation(self):         
+		return "Leaf"  
+		
+class Composite(Component):     
+	def __init__(self):         
+		self._children = []      
+		
+	def operation(self):         
+		results = []         
+		for child in self._children:             
+			results.append(child.operation())         
+		return "+".join(results)  
+		
+# Usage 
+leaf = Leaf() 
+composite = Composite() 
+composite._children.append(leaf) 
+print(composite.operation())
+```
 
 ---
-
 ## 📝 Strategy Pattern
 
 ### Purpose
@@ -134,16 +154,35 @@ Enables selecting an algorithm’s implementation at runtime.
 
 Sorting algorithms, route calculation.
 
-<details> <summary>📄 **Click for Code Example**</summary>
+<summary>📄 Code Example</summary>
 
-python
-
-`class Strategy:     def execute(self):         pass  class ConcreteStrategyA(Strategy):     def execute(self):         return "Strategy A"  class ConcreteStrategyB(Strategy):     def execute(self):         return "Strategy B"  class Context:     def __init__(self, strategy):         self._strategy = strategy      def execute_strategy(self):         return self._strategy.execute()  # Usage strategy = ConcreteStrategyA() context = Context(strategy) result = context.execute_strategy()`
-
-</details>
+```python
+class Strategy:     
+	def execute(self):         
+		pass  
+		
+class ConcreteStrategyA(Strategy):     
+	def execute(self):         
+		return "Strategy A"  
+		
+class ConcreteStrategyB(Strategy):     
+	def execute(self):         
+		return "Strategy B"  
+		
+class Context:     
+	def __init__(self, strategy):         
+		self._strategy = strategy      
+	
+	def execute_strategy(self):         
+		return self._strategy.execute()  
+		
+# Usage 
+strategy = ConcreteStrategyA() 
+context = Context(strategy) 
+result = context.execute_strategy()
+```
 
 ---
-
 ## 🔌 Adapter Pattern
 
 ### Purpose
@@ -154,13 +193,29 @@ Allows incompatible interfaces to work together.
 
 Integrating new components with existing class hierarchies.
 
-<details> <summary>📄 **Click for Code Example**</summary>
+<summary>📄 Code Example</summary>
 
-python
+```python
+class Target:     
+	def request(self):         
+		return "Target's default behavior"  
+	
+class Adaptee:     
+	def specific_request(self):         
+		return ".eetpadA eht fo roivaheb laiceps"  
+		
+class Adapter(Target):     
+	def __init__(self, adaptee):         
+		self._adaptee = adaptee      
+		
+	def request(self):         
+		return self._adaptee.specific_request()[::-1] 
 
-`class Target:     def request(self):         return "Target's default behavior"  class Adaptee:     def specific_request(self):         return ".eetpadA eht fo roivaheb laiceps"  class Adapter(Target):     def __init__(self, adaptee):         self._adaptee = adaptee      def request(self):         return self._adaptee.specific_request()[::-1]  # Usage adaptee = Adaptee() adapter = Adapter(adaptee) print(adapter.request())`
-
-</details>
+# Usage 
+adaptee = Adaptee() 
+adapter = Adapter(adaptee) 
+print(adapter.request())
+```
 
 ---
 
